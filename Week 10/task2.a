@@ -1,0 +1,18 @@
+START:
+INP         ; A
+STA NUM     ; Store A in NUM
+
+INP         ; B
+CMA         ; -B - 1
+INC         ; -B
+ADD NUM     ; A - B
+STA NUM     ; Store (A - B)
+
+INP         ; C from memory not needed as input
+CMA         ; -C - 1
+INC         ; -C
+ADD NUM     ; (A - B) - C
+OUT
+HALT
+
+NUM: .data 1 3 
